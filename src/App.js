@@ -109,6 +109,12 @@ class App extends React.Component {
               <div>
                 {this.state.selectedPage ? (
                     <Input.Group compact>
+                        <Button
+                            ghost
+                            onClick={() => copyToClipboard(this.state.token)}
+                        >
+                            Copy FB user token
+                        </Button>
                       <Button
                           ghost
                           onClick={() => copyToClipboard(this.state.selectedPage.id)}
