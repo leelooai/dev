@@ -111,9 +111,9 @@ class App extends React.Component {
                     <Input.Group compact>
                         <Button
                             ghost
-                            onClick={() => copyToClipboard(this.state.token)}
+                            onClick={() => copyToClipboard(this.state.selectedPage.access_token)}
                         >
-                            Copy FB user token
+                            Copy bot Access Token
                         </Button>
                       <Button
                           ghost
@@ -127,13 +127,12 @@ class App extends React.Component {
                       >
                         Copy bot Name
                       </Button>
-
-                      <Button
-                          ghost
-                          onClick={() => copyToClipboard(this.state.selectedPage.access_token)}
-                      >
-                        Copy bot Access Token
-                      </Button>
+                        <Button
+                            ghost
+                            onClick={() => copyToClipboard(this.state.token)}
+                        >
+                            Copy FB user token
+                        </Button>
                     </Input.Group>
                 ) : null}
               </div>
